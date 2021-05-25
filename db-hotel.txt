@@ -37,17 +37,16 @@ WHERE `status` = "accepted";
 
 6. Qual è il prezzo massimo pagato?
 
-SELECT MAX(`price`)     || SELECT MAX(`price`)
-FROM `pagamenti`;       || FROM `pagamenti`
-                        || WHERE `status` = "accepted"; 
+SELECT MAX(`price`)
+FROM `pagamenti`
+WHERE `status` = "accepted"; 
 <----------- ----- ----------->
 
 7. Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 
 SELECT *
 FROM `ospiti`
-WHERE `date_of_birth` > "1975-01-01"
-AND `date_of_birth` < "1975-12-31"
+WHERE year(`date_of_birth`) = "1975"
 AND `document_type` LIKE "D%";
 <----------- ----- ----------->
 

@@ -33,5 +33,6 @@ prenotazioni? (quante, non chi!)
 
 SELECT COUNT(prenotazione_id), `ospite_id`
 FROM `prenotazioni_has_ospiti`
-GROUP BY `ospite_id`;
+GROUP BY `ospite_id`
+ORDER BY COUNT(prenotazione_id) DESC;
 <----------- ----- ----------->

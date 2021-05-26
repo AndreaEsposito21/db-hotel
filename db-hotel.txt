@@ -54,7 +54,7 @@ AND `document_type` LIKE "D%";
 
 SELECT *
 FROM `paganti`
-WHERE `ospite_id` != 0;
+WHERE `ospite_id` <> NULL;
 <----------- ----- ----------->
 
 9. Quanti posti letto ha l’hotel in totale?
